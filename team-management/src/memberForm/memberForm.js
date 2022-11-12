@@ -3,7 +3,8 @@ import './memberForm.scss';
 import { useNavigate } from "react-router-dom";
 
 function MemberForm(props) {
-  const [member, updateMember] = React.useState({first_name:'fsdf',last_name:'vfdg',role:1,email:'bthb',phone_no:'vzdf'});
+  console.log(props);
+  const [member, updateMember] = React.useState({...props.member});
   const navigate = useNavigate();
   console.log(member);
   const saveMember = ()=>{
@@ -11,6 +12,7 @@ function MemberForm(props) {
     navigate('/home');
   };
   const deleteMember = ()=>{
+    props.deleteHandler(member);
     navigate('/home');
   }
   const del = props.showDelete;
