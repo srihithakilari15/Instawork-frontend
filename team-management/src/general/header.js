@@ -1,5 +1,5 @@
 import './header.scss'
-
+import './general.scss'
 function Header(props) {
   return (
     <>

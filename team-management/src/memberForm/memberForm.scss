@@ -1,0 +1,45 @@
+.form-container{
+ .form-el{
+  .input-el{
+    display: block;
+    margin: 3%;
+    border: 1px solid rgb(213, 213, 213);
+    border-radius: 5px;
+    padding: 3%;
+    width: 90%;
+  }
+  .info-el{
+    font-weight: 600;
+    display: block;
+    padding: 2%;
+  }
+  .role-container{
+    padding: 5% 0% 5% 0%;
+    border-bottom: 1px solid rgb(213, 213, 213);
+    .role-opt{
+      float: right;
+    }
+  }
+  .btn-container{
+    padding: 5% 0% 5% 0%;
+    display: flex;
+    justify-content: flex-end;
+    &.multiple{
+      justify-content: space-between;
+    }
+    .cancel-btn, .save-btn{
+      padding: 2%;
+      text-align: center;
+      width: 20%;
+      border-radius: 3px;
+      color: red;
+      border: 1px solid rgb(161, 161, 161);
+    }
+    .save-btn{
+      background-color: rgb(69, 69, 255);
+      border: 0px;
+      color: white;
+    }
+  }
+ } 
+}
