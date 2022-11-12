@@ -1,0 +1,16 @@
+.header-container{
+  height: 10%;
+  .header-title{
+    font-size: 2em;
+    font-weight: 600;
+  }
+  .header-desc{
+    font-size: 0.8em;
+    color: rgb(136, 136, 136);
+  }
+}
+.divider-line{
+  margin-top: 5%;
+  border-top: 1px solid rgb(170, 170, 170);
+  width: 100%;
+}

@@ -1,0 +1,25 @@
+.member-container{
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+  justify-content: flex-start;
+  .member-details{
+    display: flex;
+    margin-left: 5%;
+    flex-direction: column;
+    .member-name{
+      font-weight: 600;
+    }
+    .member-phone-no, .member-email {
+      font-size: 0.8em;
+      color: rgb(136, 136, 136);
+    }
+  }
+  .profile-pic-container{
+    width: 15%;
+    .profile-pic{
+      width: 100%;
+    }
+  }
+  
+}

@@ -1,0 +1,15 @@
+.container{
+  padding: 3%;
+  // width: 50vw;
+}
+.add-btn-container{
+  height: 3vh;
+  .add-btn *{
+    float: right;
+    font-size: 2em;
+    font-weight: 100;
+    margin-right: 2%;
+    text-decoration: none;
+    color: black;
+  }
+}
