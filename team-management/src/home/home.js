@@ -13,7 +13,8 @@ function Home() {
   const updateFn= (id) => {
     navigate('/edit',{state:{id}})
   }
-  const memberEls = members.map(mem => <Member {...{'member':mem}} clickHandler={() => updateFn(mem.id)}/>)
+  console.log(members);
+  const memberEls = members.map((mem, idx) => <Member {...{'member':mem}} clickHandler={() => updateFn(idx)}/>)
   return (
     <>
       <div className="action-btn-container">

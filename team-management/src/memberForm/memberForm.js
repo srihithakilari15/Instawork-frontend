@@ -20,10 +20,10 @@ function MemberForm(props) {
     <div className='form-container'>
       <form className='form-el'>
         <label className='info-el'> Info</label>
-        <input type="text" required className='input-el' onChange={(e) => updateMember({...member,first_name:e.target.value})} value={member.first_name}/>
-        <input type="text" required className='input-el' onChange={(e) => updateMember({...member,last_name:e.target.value})} value={member.last_name}/>
-        <input type="text" required className='input-el' onChange={(e) => updateMember({...member,email:e.target.value})} value={member.email}/>
-        <input type="text" required className='input-el' onChange={(e) => updateMember({...member,phone_no:e.target.value})} value={member.phone_no}/>
+        <input type="text" required placeholder='First Name' className='input-el' onChange={(e) => updateMember({...member,first_name:e.target.value})} value={member.first_name}/>
+        <input type="text" required placeholder='Last Name' className='input-el' onChange={(e) => updateMember({...member,last_name:e.target.value})} value={member.last_name}/>
+        <input type="text" required placeholder='Email' className='input-el' onChange={(e) => updateMember({...member,email:e.target.value})} value={member.email}/>
+        <input type="text" required placeholder='Phone Number' className='input-el' onChange={(e) => updateMember({...member,phone_no:e.target.value})} value={member.phone_no}/>
         <label className='info-el'> Role</label>
         <div className='role-container'>
           <label className='role-name'>Regular - Can't delete members</label>

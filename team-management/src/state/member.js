@@ -2,8 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 
 let members  = localStorage.getItem("members");
-members = members? JSON.parse(members):[]
-let counter = members.length;
+members = members? JSON.parse(members):[];
 // Slice
 const slice = createSlice({
   name: 'members',
@@ -12,8 +11,6 @@ const slice = createSlice({
     addMemberFn: (state, action) => {
       console.log(action.payload);
       console.log(state.user);
-      action.payload.id=counter;
-      counter++;
       action.payload.profile_pic = action.payload.profile_pic? action.payload.profile_pic : 'default-img.jpeg';
       state.push( action.payload );
       localStorage.setItem("members", JSON.stringify(state));
@@ -27,7 +24,7 @@ const slice = createSlice({
     updateMemberFn: (state, action) =>  {
       console.log(action.payload);
       console.log(state.user);
-      state[action.payload.id]=action.payload;
+      state[action.payload[0]]=action.payload[1];
       localStorage.setItem("members", JSON.stringify(state));
     },
   },
@@ -54,10 +51,10 @@ export const removeMember = (id) => async dispatch => {
   }
 }
 
-export const updateMember = (member) => async dispatch => {
+export const updateMember = (index, member) => async dispatch => {
   try {
     // const res = await api.post('/api/auth/logout/')
-    return dispatch(updateMemberFn(member))
+    return dispatch(updateMemberFn([index, member]))
   } catch (e) {
     return console.error(e.message);
   }

@@ -8,7 +8,9 @@ import { removeMember, updateMember } from '../state/member';
 function Edit() {
   const dispatch = useDispatch();
   const info = useLocation();
+  console.log(info);
   const members = useSelector(state => state.members);
+  console.log(members);
   const member = members[info.state.id];
   console.log(member);
   const headerConfig={};
@@ -16,12 +18,12 @@ function Edit() {
   headerConfig.desc = 'Edit email, location and role';
   const updateHandler = (member)=> {
     console.log(member);
-    dispatch(updateMember(member));
+    dispatch(updateMember(info.state.id, member));
   }
 
   const deleteHandler = (member) => {
     console.log(member);
-    dispatch(removeMember(member.id));
+    dispatch(removeMember(info.state.id));
   }
 
   return (
