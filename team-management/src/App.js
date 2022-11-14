@@ -9,7 +9,8 @@ import Home from './home/home';
 function App() {
   return (
     <Router>
-      <Routes>
+      <Routes>     
+        <Route path="/" element={<Home />}/>
         <Route path="/home" element={<Home />}/>
         <Route path="/add" element={<Add />}/>
         <Route path="/edit" element={<Edit />}/>
