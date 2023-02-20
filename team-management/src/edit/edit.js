@@ -18,12 +18,12 @@ function Edit() {
   headerConfig.desc = 'Edit email, location and role';
   const updateHandler = (member)=> {
     console.log(member);
-    dispatch(updateMember(info.state.id, member));
+    updateMember(info.state.id, member);
   }
 
   const deleteHandler = (member) => {
     console.log(member);
-    dispatch(removeMember(info.state.id));
+    removeMember(info.state.id);
   }
 
   return (
